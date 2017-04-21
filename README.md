@@ -1,3 +1,6 @@
+# Polymer 2.0 Workshop @ Google Fair GDG Algiers
+
+###using starter Kit 2
 
 
 <p align="center">
@@ -20,6 +23,7 @@ First, install [Polymer CLI](https://github.com/Polymer/polymer-cli) using
     mkdir my-app
     cd my-app
     polymer init starter-kit
+    git clone /*the PolymerGFair repository*/
 
 ### Start the development server
 
