@@ -1,0 +1,54 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+<dom-module id="post-it">
+  <template>
+    <style >
+      :host {
+        display: block;
+        margin-left: 350px;
+        margin-right: 100px;
+
+        padding: 10px;
+        --paper-card:{
+          width:250px;
+          height: 250px;
+          background-color: #FFEB5B; 
+        };
+      }
+      div{
+        overflow: auto;
+      }
+    </style>
+
+    <paper-card heading="[[title]]" elevation="2" animated-shadow="false">
+      <div class="card-content">
+        [[content]]
+      </div>
+
+    </paper-card>
+
+  </template>
+
+  <script>
+    class PostIt extends Polymer.Element {
+      static get is() { return 'post-it'; }
+
+      static get properties() {
+        return {
+          title: {
+            type: String,
+            value:"Note title"
+          },
+          content:{
+            type:String,
+            value:"Note content"
+          }
+        };
+      }
+
+    }
+
+    window.customElements.define(PostIt.is, PostIt);
+  </script>
+</dom-module>

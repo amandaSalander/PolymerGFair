@@ -1,0 +1,73 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-view1">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+        margin-top: 100px;
+      }
+      iron-icon{
+        width: 144px;
+        height: 144px;
+      }
+      #view{
+        background-color: rgb(30,136,229);
+        color: white;
+      }
+      #visit{
+        background-color: rgb(245,39,87);
+        color: white;
+      }
+      paper-card{
+        width: 750px;
+      }
+      paper-button:first-child{
+        margin-left: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <iron-icon src="../images/manifest/icon-144x144.png"></iron-icon>
+    </div>
+
+    <paper-card heading="Polymer"  elevation="4" animated-shadow="false">
+      <div class="card-content">
+        Polymer 2.0
+        Unlock the Power of Web Components. Polymer is a JavaScript library that helps you create custom reusable HTML elements, and use them to build performant, maintainable apps.
+      </div>
+      <div class="card-actions">
+        <paper-button id="view" raised>View code</paper-button>
+        <paper-button id="visit" raised>Visit Polymer project</paper-button>
+      </div>
+    </paper-card>
+
+    
+  </template>
+
+  <script>
+    class MyView1 extends Polymer.Element {
+      static get is() { return 'my-view1'; }
+    }
+
+    window.customElements.define(MyView1.is, MyView1);
+  </script>
+</dom-module>

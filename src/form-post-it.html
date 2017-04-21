@@ -1,0 +1,59 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<!--
+A comment describing this element
+
+Example:
+
+    <my-elem></my-elem>
+
+Example:
+
+    <my-elem>
+      <h2>Hello my-elem</h2>
+    </my-elem>
+
+@demo demo/index.html
+-->
+
+<dom-module id="form-post-it">
+	<template>
+		<style>
+			:host {
+				display: block;
+				margin-top: 50px;
+				margin-bottom: 20px;
+				margin-left: 100px;
+				margin-right: 100px;
+			}
+		</style>
+
+		 <paper-input label="title" value="{{title}}"></paper-input>
+
+    	<paper-input label="content" value="{{content}}"></paper-input>
+		
+	</template>
+	<script>
+		class FormPostIt extends Polymer.Element {
+      static get is() { return 'form-post-it'; }
+
+      static get properties() {
+        return {
+          title: {
+            type: String,
+            notify:true,
+            value:"Note title"
+          },
+          content:{
+            type:String,
+            notify:true,
+            value:"Note content"
+          }
+        };
+      }
+
+    }
+
+    window.customElements.define(FormPostIt.is, FormPostIt);
+	</script>
+</dom-module>
